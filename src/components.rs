@@ -22,5 +22,13 @@ pub struct Renderable {
   pub bg: RGB,
 }
 
+#[derive(Component)]
+pub struct Monster {}
+
+#[derive(Component)]
+pub struct Name {
+  pub name: String,
+}
+
 #[derive(Component, Debug)]
 pub struct Player {}

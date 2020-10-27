@@ -1,7 +1,5 @@
 use rltk::{Rltk, RGB, RandomNumberGenerator, Algorithm2D, BaseMap, Point};
 use super::{Rect};
-use super::{Viewshed};
-use super::{Player};
 use std::cmp::{min, max};
 use specs::prelude::*;
 
