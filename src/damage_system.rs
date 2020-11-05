@@ -33,7 +33,10 @@ pub fn delete_the_dead(ecs: &mut World) {
     for (entity, stats) in (&entities, &combat_stats).join() {
       if stats.hp < 1 {
         let player = players.get(entity);
-        dead.push(entity);
+        match player {
+          None => dead.push(entity),
+          Some(_) => console::log("You are dead!")
+        }
       }
     }
   }

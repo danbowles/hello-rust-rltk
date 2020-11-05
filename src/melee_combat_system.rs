@@ -27,12 +27,7 @@ impl <'a> System<'a> for MeleeCombatSystem {
       mut inflict_damage,
     ) = data;
 
-    for (
-      _entity,
-      wants_melee,
-      name,
-      stats
-    ) in (
+    for (_entity, wants_melee, name, stats) in (
       &entities,
       &mut wants_melee,
       &names,
