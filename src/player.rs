@@ -20,7 +20,7 @@ pub fn try_move_player(delta_x: i32, delta_y: i32, ecs: &mut World) {
   let mut positions = ecs.write_storage::<Position>();
   let mut players = ecs.write_storage::<Player>();
   let mut viewshed = ecs.write_storage::<Viewshed>();
-  let mut combat_stats = ecs.read_storage::<CombatStats>();
+  let combat_stats = ecs.read_storage::<CombatStats>();
   let entities = ecs.entities();
   let map = ecs.fetch::<Map>();
   let mut wants_to_melee = ecs.write_storage::<WantsToMelee>();
